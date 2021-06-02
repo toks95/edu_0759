@@ -11,6 +11,12 @@ TF = (9 / 5) * TC + 32
 
 public class Main {
     public static void main(String[] args) {
-       // Ваш код
+        System.out.println(convertCelsiusToFahrenheit(41));
+    }
+
+    public static double convertCelsiusToFahrenheit(int celsius) {
+        double fahrenheit = (celsius * 9.0 / 5.0 + 32);
+
+        return fahrenheit;
     }
 }

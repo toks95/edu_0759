@@ -9,8 +9,24 @@
 
 
 
+/* public class Main {
+    public static void main(String[] args) {
+        System.out.println(getVolume(25, 5, 2));
+    }
+    public static long getVolume(int a, int b, int c) {
+        long d = 1000*a*b*c;
+        return d;
+    }
+}
+*/
+
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        //Ваш код
+        Scanner scan = new Scanner (System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        System.out.println(1000*a*b*c);
     }
 }
