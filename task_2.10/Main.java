@@ -4,7 +4,14 @@
 
 public class Main {
     public static void main(String[] args) {
-        //напишите тут ваш код
+        int[] massiv =  {1, 2, 3, 4, 5, 6, 6};
+
+        String str = "Нет";
+        for (int i=0; i< massiv.length-1; i++) {
+
+            if (massiv[i] == massiv[i+1]) str = "Да";
+        }
+        System.out.println(str);
 
     }
 }
