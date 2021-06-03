@@ -5,8 +5,12 @@
 
 
 public class Main {
-    public static void main(String[] args) {
-        //напишите тут ваш код
+    public static boolean eq(int a, int b) {
+        if(a+b > 10) return true; else return false;
 
+    }
+    public static void main(String[] args) throws Exception {
+        System.out.println(eq(-50, -50));
+        System.out.println(eq(5, 6));
     }
 }

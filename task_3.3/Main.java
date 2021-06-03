@@ -4,8 +4,12 @@
 
 
 public class Main {
-    public static void main(String[] args) {
-        //напишите тут ваш код
+    public static boolean eq(int a, int b) {
 
+        if(a==b) return true; else return false;
+    }
+    public static void main(String[] args) {
+        System.out.println(eq(40, 40));
+        System.out.println(eq(10, -10));
     }
 }
