@@ -11,7 +11,7 @@
 •	Текст в каждой строке должен быть уникален.
 •	Должны быть выведены все возможные комбинации. */
 
-public class Main {
+/* public class Main {
     public static void main(String[] args) {
         String a = "Мама";
         String b = "Мыла";
@@ -25,3 +25,20 @@ public class Main {
 
     }
 }
+*/
+
+
+
+    public class Main {
+        public static void main(String[] args) {
+            String[] words = {"Мама", "Мыла", "Раму"};
+            int word = 1;
+            for (int i = 1; i <= words.length; i++) {
+                word = word * i;
+            }
+            for (int i=0;i<3;i++)
+                for (int j=0;j<3;j++)
+                    if (i!=j)
+                        System.out.println(words[i]+words[j]+words[3-i-j]);
+        }
+    }

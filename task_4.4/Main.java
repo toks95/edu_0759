@@ -19,9 +19,11 @@ Mouse jerryMouse = new Mouse("Jerry", 12 , 5),
 
 public class Main {
     public static void main(String[] args) {
-        Mouse jerryMouse = new Mouse("Jerry", 12, 5);
-
-        //напишите тут ваш код
+        Mouse jerryMouse = new Mouse("Jerry", 10, 5);
+        Cat tomCat = new Cat("Tom", 40, 5);
+        Dog spikeDog = new Dog("Spike", 50, 10);
+        Homeowner mammyHomeowner = new Homeowner ("Mammy Two Shoes", 60, 15);
+        System.out.println(jerryMouse.toString() + "\n" + tomCat + "\n" + spikeDog + "\n" + mammyHomeowner);
     }
 }
 class Mouse {
@@ -29,9 +31,42 @@ class Mouse {
     int height;
     int tail;
 
-    public Mouse(String name, int height, int tail) {
+    public Mouse (String name, int height, int tail) {
         this.name = name;
         this.height = height;
         this.tail = tail;
+    }
+}
+class Cat {
+    String name;
+    String ownerName;
+    double height;
+
+    public Cat (String name, String ownerName, double height) {
+        this.name = name;
+        this.ownerName = ownerName;
+        this.height = height;
+    }
+}
+class Dog {
+    String name;
+    String fatherName;
+    boolean isEnemyOfJerry;
+
+    public Dog (String name, String fatherName, boolean isEnemyOfJerry) {
+        this.name = name;
+        this.fatherName = fatherName;
+        this.isEnemyOfJerry = isEnemyOfJerry;
+    }
+}
+class Homeowner {
+    String name;
+    String fatherName;
+    boolean isEnemyOfJerry;
+
+    public Homeowner (String name, String fatherName, boolean isEnemyOfJerry) {
+        this.name = name;
+        this.fatherName = fatherName;
+        this.isEnemyOfJerry = isEnemyOfJerry;
     }
 }

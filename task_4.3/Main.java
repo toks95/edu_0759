@@ -15,11 +15,14 @@
 
 public class Main {
     public static void main(String[] args) {
-
+        Cat cat1 = new Cat(2, 4, 6);
+        Cat cat2 = new Cat(3, 6, 5);
+        System.out.println("Этот кот всего лишь думает, что выиграл. " + cat1.fight(cat2));
     }
 }
 
 class Cat {
+
     public int age;
     public int weight;
     public int strength;
@@ -27,7 +30,34 @@ class Cat {
     public Cat() {
     }
 
-    public boolean fight(Cat anotherCat) {
-        //напишите тут ваш код
+    public Cat(int age, int weight, int strength) {
+        this.age = age;
+        this.weight = weight;
+        this.strength = strength;
     }
+
+    public boolean fight(Cat anotherCat) {
+        int ourCount = 0;
+        int enemyCount = 0;
+        if (this.age > anotherCat.age) ourCount++;
+        else if (this.age < anotherCat.age) enemyCount++;
+        else {
+            ourCount++;
+            enemyCount++;
+        }
+        if (this.weight > anotherCat.weight) ourCount++;
+        else if (this.weight < anotherCat.weight) enemyCount++;
+        else {
+            ourCount++;
+            enemyCount++;
+        }
+        if (this.strength > anotherCat.strength) ourCount++;
+        else if (this.strength < anotherCat.strength) enemyCount++;
+        else {
+            ourCount++;
+            enemyCount++;
+        }
+        return ourCount > enemyCount;
+    }
+
 }
