@@ -19,8 +19,27 @@
 10
 */
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.TreeSet;
+
 public class Main {
     public static void main(String[] args) {
-        // напишите тут ваш код
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Укажите путь: ");
+        try {
+            FileInputStream fis = new FileInputStream(scan.nextLine());
+            scan = new Scanner(fis);
+            TreeSet<Integer> numbers = new TreeSet<>();
+            while (scan.hasNext()){
+                int data = scan.nextInt();
+                if (data %2==0) numbers.add(data);
+            }
+            for (int i : numbers) System.out.println(i);
+            fis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -35,12 +35,11 @@ public class Main {
             list.add(family);
         }
 
-        // Read the house number
-        int houseNumber = scanner.nextInt();
-
-        if (0 <= houseNumber && houseNumber < list.size()) {
-            String familyName = list.get(houseNumber);
-            System.out.println(familyName);
+        String city = scanner.nextLine();
+        int i = list.indexOf(city);
+        if (0 <= i && i < list.size()) {
+            String Family = list.get(++i);
+            System.out.println(Family);
         }
     }
 }

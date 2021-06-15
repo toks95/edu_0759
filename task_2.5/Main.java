@@ -10,10 +10,10 @@ public class Main {
         System.out.println("Введите число:");
         int a = scanner.nextInt();
         if (a==10){
-            System.out.println(" Верно. ");
+            System.out.println("Верно.");
         }
         else {
-            System.out.println(" Неверно. ");
+            System.out.println("Неверно.");
         }
     }
 }

@@ -17,5 +17,7 @@ public class Main {
         names.add("Георгий");
         names.add("Павел");
         names.add("Руслан");
+
+        names.stream().distinct().forEach(System.out::println);
     }
 }

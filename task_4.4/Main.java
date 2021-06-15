@@ -19,54 +19,43 @@ Mouse jerryMouse = new Mouse("Jerry", 12 , 5),
 
 public class Main {
     public static void main(String[] args) {
-        Mouse jerryMouse = new Mouse("Jerry", 10, 5);
-        Cat tomCat = new Cat("Tom", 40, 5);
-        Dog spikeDog = new Dog("Spike", 50, 10);
-        Homeowner mammyHomeowner = new Homeowner ("Mammy Two Shoes", 60, 15);
-        System.out.println(jerryMouse.toString() + "\n" + tomCat + "\n" + spikeDog + "\n" + mammyHomeowner);
-    }
-}
-class Mouse {
-    String name;
-    int height;
-    int tail;
-
-    public Mouse (String name, int height, int tail) {
-        this.name = name;
-        this.height = height;
-        this.tail = tail;
-    }
-}
-class Cat {
-    String name;
-    String ownerName;
-    double height;
-
-    public Cat (String name, String ownerName, double height) {
-        this.name = name;
-        this.ownerName = ownerName;
-        this.height = height;
+        Mouse jerryMouse = new Mouse ("Jerry", "male", "brown");
+        Cat tomCat = new Cat ("Tom", "male", "silver");
+        Dog spikeDog = new Dog ("Spike", "male", "lead-grey");
+        Mouse nibblesMouse = new Mouse ("Nibbles", "male", "gray");
+        System.out.println(jerryMouse.color);
     }
 }
 class Dog {
     String name;
-    String fatherName;
-    boolean isEnemyOfJerry;
+    String gender;
+    String color;
 
-    public Dog (String name, String fatherName, boolean isEnemyOfJerry) {
+    public Dog (String name, String gender, String color) {
         this.name = name;
-        this.fatherName = fatherName;
-        this.isEnemyOfJerry = isEnemyOfJerry;
+        this.gender = gender;
+        this.color = color;
     }
 }
-class Homeowner {
+class Cat {
     String name;
-    String fatherName;
-    boolean isEnemyOfJerry;
+    String gender;
+    String color;
 
-    public Homeowner (String name, String fatherName, boolean isEnemyOfJerry) {
+    public Cat (String name, String gender, String color) {
         this.name = name;
-        this.fatherName = fatherName;
-        this.isEnemyOfJerry = isEnemyOfJerry;
+        this.gender = gender;
+        this.color = color;
+    }
+}
+class Mouse {
+    String name;
+    String gender;
+    String color;
+
+    public Mouse (String name, String gender, String color) {
+        this.name = name;
+        this.gender = gender;
+        this.color = color;
     }
 }
