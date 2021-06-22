@@ -23,17 +23,14 @@ public class Server {
             while (true){ // бесконечный цикл для ожидания подключения клиентов
                 System.out.println("...подключение клиентов...");
                 Socket socket = serverSocket.accept(); // Ожидаем подключения клиента
-
                 System.out.println("Клиент подключился.");
                 DataInputStream in = new DataInputStream(socket.getInputStream()); // Поток ввода
                 DataOutputStream out = new DataOutputStream(socket.getOutputStream()); // Поток вывода
                 out.writeUTF("Здравствуйте! Как к Вам можно обращаться?");
-
                 String name = in.readUTF(); // Принимает сообщение от клиента
                 clientSockets.put(socket,name);
                 out.writeUTF(" Добро пожаловать!"+name.toUpperCase(Locale.ROOT)+ " , обращайтесь, если есть вопросы."); // Рассылает принятое сообщение всем клиентам
                 out.writeUTF("Мы ответим в любое время суток.");
-
                 Thread thread = new Thread(new Runnable() {
                     @Override
                     public void run() {
