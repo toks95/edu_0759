@@ -1,5 +1,7 @@
 //package server;
 
+import server.User;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -23,6 +25,10 @@ public class Server {
             while (true){ // бесконечный цикл для ожидания подключения клиентов
                 System.out.println("...подключение клиентов...");
                 Socket socket = serverSocket.accept(); // Ожидаем подключения клиента
+
+                User currentUser = new User(socket);
+                        clientSockets.add(socket);
+
                 System.out.println("Клиент подключился.");
                 DataInputStream in = new DataInputStream(socket.getInputStream()); // Поток ввода
                 DataOutputStream out = new DataOutputStream(socket.getOutputStream()); // Поток вывода

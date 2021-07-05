@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="500" prefWidth="500" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <TextArea fx:id="userListTextArea" editable="false" prefHeight="500" prefWidth="300" style="-fx-control-inner-background: black; -fx-text-fill: yellow; -fx-background-color: green;" />
+   <VBox alignment="center" prefHeight="400" prefWidth="400" style="-fx-background-color: black;">
+      <children>
+         <TextArea fx:id="textArea" editable="false" prefHeight="470.0" prefWidth="300.0" style="-fx-control-inner-background: black; -fx-text-fill: yellow; -fx-background-color: green; -fx-border-color: green;" />
+         <HBox prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: black;">
+            <children>
+               <TextField fx:id="textField" onAction="#send" prefWidth="200" style="-fx-background-color: black; -fx-text-fill: yellow; -fx-border-color: green;" />
+               <Button mnemonicParsing="false" onAction="#send" prefWidth="60" style="-fx-background-color: white; -fx-border-color: green;" text="Отправить" textAlignment="CENTER" textFill="YELLOW" />
+            </children>
+         </HBox>
+         <Button fx:id="connectBtn" onAction="#connect" prefHeight="30" prefWidth="Infinity" text="Подключиться" />
+      </children>
+   </VBox>
+</HBox>
